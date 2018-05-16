@@ -1,3 +1,5 @@
+require 'json'
+
 module Patreon
   class API
     def initialize(access_token)
@@ -50,7 +52,7 @@ module Patreon
     end
 
     def parse_json(json)
-      JSON::Api::Vanilla.parse(json)
+      JSON.parse(json)
     end
   end
 end
